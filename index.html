@@ -14,6 +14,17 @@
 
 <body>
 
+  <!-- SIDE NAV -->
+  <nav class="side-nav" aria-label="Page sections">
+    <a class="sn-dot on" href="#about" data-label="About"></a>
+    <div class="sn-line"></div>
+    <a class="sn-dot" href="#competitions" data-label="Competitions"></a>
+    <div class="sn-line"></div>
+    <a class="sn-dot" href="#research" data-label="Research"></a>
+    <div class="sn-line"></div>
+    <a class="sn-dot" href="#activities" data-label="Activities"></a>
+  </nav>
+
   <!-- NAV -->
   <nav>
     <div class="nav-in">
@@ -58,12 +69,13 @@
   </div>
 
   <!-- COMPETITIONS -->
-  <section id="competitions">
-    <div class="section-wrap reveal">
-      <div class="eyebrow">Awards &amp; Honors</div>
-      <h2 class="section-heading">Competition Record<span class="zh">竞赛成绩</span></h2>
-    </div>
+  <div class="poster d">
+    <div class="poster-txt">Competition<br>Record</div>
+    <div class="poster-sub">Math · Physics · Chemistry · Robotics · 竞赛成绩</div>
+    <div class="poster-ghost">01</div>
+  </div>
 
+  <section id="competitions">
     <!-- STAIRCASE -->
     <div class="section-wrap" style="padding-top:40px;padding-bottom:100px">
       <div class="stair-container reveal">
@@ -173,7 +185,7 @@
   </section>
 
   <!-- POSTER -->
-  <div class="poster g">
+  <div class="poster g slant-l">
     <div class="poster-txt">Research &amp;<br>Modeling</div>
     <div class="poster-sub">Applied Math · Science · Innovation · 科研经历</div>
     <div class="poster-ghost">02</div>
@@ -214,7 +226,7 @@
   </section>
 
   <!-- POSTER -->
-  <div class="poster d">
+  <div class="poster d slant-r">
     <div class="poster-txt">Beyond<br>Classroom</div>
     <div class="poster-sub">Volunteering · Community · Impact · 课外活动</div>
     <div class="poster-ghost">03</div>
@@ -222,39 +234,34 @@
 
   <!-- ACTIVITIES -->
   <section id="activities">
-    <div class="section-wrap reveal">
-      <div class="eyebrow">Extracurricular</div>
-      <h2 class="section-heading">Activities<span class="zh">课外 / 志愿</span></h2>
+    <div class="act-banner-wrap">
+      <div class="act-banner reveal">
+        <img class="act-banner-img" src="https://picsum.photos/seed/volunteer2024/1400/480" alt="Activities banner"/>
+        <div class="act-banner-circle">
+          <img src="https://picsum.photos/seed/charity2024/320/320" alt="Activity detail"/>
+        </div>
+      </div>
+      <p class="act-caption">Extracurricular · Volunteering · Community · 课外活动</p>
     </div>
-    <div class="section-wrap">
-      <div class="act-list">
-        <div class="act-item reveal">
-          <div class="act-n">01</div>
-          <div>
-            <div class="act-icon"><i data-lucide="flask-conical"></i></div>
-            <div class="act-title">Volunteer — Primary School Outreach</div>
-            <div class="act-desc">Taught basic chemistry concepts about volcanoes and guided hands-on eruption
-              experiments, helping primary school pupils understand natural phenomena through science.</div>
-          </div>
-        </div>
-        <div class="act-item reveal">
-          <div class="act-n">02</div>
-          <div>
-            <div class="act-icon"><i data-lucide="languages"></i></div>
-            <div class="act-title">Volunteer Translator — SEHS College Fair</div>
-            <div class="act-desc">Served as an on-site interpreter between college admissions officers and prospective
-              students, helping visitors access accurate and relevant admissions information.</div>
-          </div>
-        </div>
-        <div class="act-item reveal">
-          <div class="act-n">03</div>
-          <div>
-            <div class="act-icon"><i data-lucide="heart"></i></div>
-            <div class="act-title">Participant — Charity Fair</div>
-            <div class="act-desc">Donated clothing to children in rural areas as part of a school-organized charity
-              initiative focused on community support and social responsibility.</div>
-          </div>
-        </div>
+
+    <div class="act-cols reveal">
+      <div class="act-col">
+        <div class="act-col-icon"><i data-lucide="flask-conical"></i></div>
+        <div class="act-col-title">Science<br>Outreach</div>
+        <div class="act-col-desc">Taught basic chemistry concepts about volcanoes and guided hands-on eruption experiments, helping primary school pupils understand natural phenomena through science.</div>
+        <a class="act-col-btn" href="#">Volunteer Work</a>
+      </div>
+      <div class="act-col">
+        <div class="act-col-icon"><i data-lucide="languages"></i></div>
+        <div class="act-col-title">College<br>Fair</div>
+        <div class="act-col-desc">Served as an on-site interpreter between college admissions officers and prospective students, helping visitors access accurate and relevant admissions information.</div>
+        <a class="act-col-btn" href="#">Translation</a>
+      </div>
+      <div class="act-col">
+        <div class="act-col-icon"><i data-lucide="heart"></i></div>
+        <div class="act-col-title">Charity<br>Fair</div>
+        <div class="act-col-desc">Donated clothing to children in rural areas as part of a school-organized charity initiative focused on community support and social responsibility.</div>
+        <a class="act-col-btn" href="#">Community</a>
       </div>
     </div>
   </section>
