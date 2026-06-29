@@ -9,7 +9,7 @@ function render(d) {
   document.title = meta.title;
 
   // NAV
-  document.getElementById('nav-cta').href = `mailto:${meta.email}`;
+  document.getElementById('nav-cta').href = meta.contact_url;
   document.getElementById('nav-links').innerHTML =
     ['competitions', 'research', 'activities']
       .map(s => `<li><a href="#${s}">${cap(s)}</a></li>`).join('');
@@ -120,7 +120,61 @@ function render(d) {
   // Init lucide icons
   lucide.createIcons();
 
-  // Scroll reveal
+  // ── STAIRCASE: alternate left/right slide-in ──
+  const stairIO = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const rows = document.querySelectorAll('.stair-row');
+      rows.forEach((row, i) => {
+        const delay = i * 80;
+        row.style.animationDelay = delay + 'ms';
+        row.classList.add(i % 2 === 0 ? 'al' : 'ar');
+      });
+      stairIO.disconnect();
+    });
+  }, { threshold: 0.05 });
+  const stairEl = document.getElementById('stair-container');
+  if (stairEl) stairIO.observe(stairEl);
+
+  // ── RESEARCH: pop visual then slide body ──
+  document.querySelectorAll('.research-item').forEach((item, idx) => {
+    const visual = item.querySelector('.r-visual');
+    const body = item.querySelector('.r-body');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        visual.style.animationDelay = (idx * 120) + 'ms';
+        visual.classList.add('popped');
+        setTimeout(() => {
+          body.style.animationDelay = '0ms';
+          body.classList.add('slid');
+        }, 420 + idx * 120);
+        io.disconnect();
+      });
+    }, { threshold: 0.1 });
+    io.observe(item);
+  });
+
+  // ── ACTIVITIES: circle pop then cols fade ──
+  const circleEl = document.querySelector('.act-banner-circle');
+  if (circleEl) {
+    const circleIO = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        circleEl.classList.add('popped');
+        setTimeout(() => {
+          document.querySelectorAll('.act-col').forEach((col, i) => {
+            col.style.animationDelay = (i * 120) + 'ms';
+            col.classList.add('fi');
+          });
+        }, 600);
+        circleIO.disconnect();
+      });
+    }, { threshold: 0.2 });
+    circleIO.observe(circleEl);
+  }
+
+  // generic reveal for remaining .reveal elements
   const revealIO = new IntersectionObserver(
     e => e.forEach(x => { if (x.isIntersecting) x.target.classList.add('on'); }),
     { threshold: 0.07 }
