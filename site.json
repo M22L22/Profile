@@ -1,13 +1,13 @@
 {
   "meta": {
-    "title": "Muo Lue — Math & Physics",
+    "title": "Mou Lue — Math & Physics",
     "email": "muelue@example.com"
   },
   "hero": {
     "year": "2026",
     "tagline": "Mathematics & Physics",
     "tagline_sub": "Chasing rigorous proofs\nand elegant models.",
-    "name_first": "Muo",
+    "name_first": "Mou",
     "name_last": "Lue",
     "name_zh": "牟略",
     "school": "山东省实验中学",
@@ -171,7 +171,7 @@
     }
   },
   "footer": {
-    "name": "Muo Lue",
+    "name": "Mou Lue",
     "sub": "牟略 · Mathematics & Physics · Chongqing, China"
   }
 }
