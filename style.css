@@ -545,7 +545,7 @@ nav:not(.side-nav) {
 .act-banner-wrap{max-width:var(--container-max);margin:0 auto;padding:0 var(--gutter);position:relative}
 .act-banner{position:relative;width:100%;height:auto;aspect-ratio:21/9;overflow:visible}
 .act-banner-img{width:100%;height:100%;object-fit:cover;display:block}
-.act-banner-circle{position:absolute;top:-80px;right:0;width:min(570px,37vw);height:min(570px,37vw);border-radius:50%;overflow:hidden;border:6px solid var(--bg);box-shadow:0 8px 40px rgba(0,0,0,.25);z-index:2}
+.act-banner-circle{position:absolute;top:-80px;right:6%;width:min(570px,37vw);height:min(570px,37vw);border-radius:50%;overflow:hidden;border:6px solid var(--bg);box-shadow:0 8px 40px rgba(0,0,0,.25);z-index:2}
 .act-banner-circle img{width:100%;height:100%;object-fit:cover}
 .act-caption{font-size:11px;color:var(--muted);padding:8px 0;letter-spacing:.03em}
 .act-cols{display:grid;grid-template-columns:1fr 1fr 1fr;max-width:var(--container-max);margin:48px auto 0;padding:0 var(--gutter)}
