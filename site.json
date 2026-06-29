@@ -1,0 +1,177 @@
+{
+  "meta": {
+    "title": "Muo Lue — Math & Physics",
+    "email": "muelue@example.com"
+  },
+  "hero": {
+    "year": "2026",
+    "tagline": "Mathematics & Physics",
+    "tagline_sub": "Chasing rigorous proofs\nand elegant models.",
+    "name_first": "Muo",
+    "name_last": "Lue",
+    "name_zh": "牟略",
+    "school": "山东省实验中学",
+    "location": "Shandong, China",
+    "grade": "Year 12",
+    "bg_image": "https://picsum.photos/seed/mathphysics/1600/900"
+  },
+  "sections": {
+    "competitions": {
+      "poster": {
+        "title": "Competition\nRecord",
+        "sub": "Math · Physics · Chemistry · Robotics · 竞赛成绩",
+        "ghost": "01"
+      },
+      "items": [
+        {
+          "num": "01",
+          "name": "Global Top 10 & National Top 3 — Team Overall",
+          "event": "Berkeley Math Tournament",
+          "date": "Nov 2024",
+          "width": "100%",
+          "highlight": true
+        },
+        {
+          "num": "02",
+          "name": "National Top 3 — Team Guts Round",
+          "event": "Berkeley Math Tournament",
+          "date": "Nov 2024",
+          "width": "88%",
+          "highlight": true
+        },
+        {
+          "num": "03",
+          "name": "National Top 3 — Team Power Round",
+          "event": "Berkeley Math Tournament",
+          "date": "Nov 2024",
+          "width": "76%",
+          "highlight": true
+        },
+        {
+          "num": "04",
+          "name": "Gold Award — Senior Physics Challenge Online",
+          "event": "Senior Physics Challenge",
+          "date": "Sep 2025",
+          "width": "64%",
+          "highlight": false
+        },
+        {
+          "num": "05",
+          "name": "Gold Certificate — Senior Mathematics Competition",
+          "event": "Senior Mathematics Competition",
+          "date": "Sep 2024",
+          "width": "52%",
+          "highlight": false
+        },
+        {
+          "num": "06",
+          "name": "2nd Place, Connect Award — FTC",
+          "event": "FIRST Robotics",
+          "date": "May 2025",
+          "width": "40%",
+          "highlight": false
+        },
+        {
+          "num": "07",
+          "name": "Bronze Certificate — UK Chemistry Olympiad Round One",
+          "event": "Royal Society of Chemistry",
+          "date": "Jan 2026",
+          "width": "28%",
+          "highlight": false
+        },
+        {
+          "num": "08",
+          "name": "Top 25% — Hypatia Contest",
+          "event": "Waterloo Mathematics",
+          "date": "May 2026",
+          "width": "20%",
+          "highlight": false
+        },
+        {
+          "num": "09",
+          "name": "Top 25% — AMC 12A",
+          "event": "American Mathematics Competition",
+          "date": "Sep 2025",
+          "width": "13%",
+          "highlight": false
+        },
+        {
+          "num": "10",
+          "name": "Top 25% — Galois Contest",
+          "event": "Waterloo Mathematics",
+          "date": "Jun 2025",
+          "width": "7%",
+          "highlight": false
+        }
+      ]
+    },
+    "research": {
+      "poster": {
+        "title": "Research &\nModeling",
+        "sub": "Applied Math · Science · Innovation · 科研经历",
+        "ghost": "02"
+      },
+      "eyebrow": "Research Experience",
+      "heading": "Work & Projects",
+      "heading_zh": "科研 / 建模",
+      "items": [
+        {
+          "image": "https://picsum.photos/seed/himcm/700/380",
+          "image_alt": "HiMCM",
+          "status": "Completed",
+          "status_class": "",
+          "title": "HiMCM\nH Award",
+          "desc": "Participated in the High School Mathematical Contest in Modeling (HiMCM), developing quantitative models to analyze and solve complex real-world problems under competition conditions.",
+          "award": "H Award · Mathematical Modeling",
+          "award_icon": "star"
+        },
+        {
+          "image": "https://picsum.photos/seed/researchlab/700/380",
+          "image_alt": "Research",
+          "status": "In Progress",
+          "status_class": "ip",
+          "title": "Independent\nResearch",
+          "desc": "Currently conducting research in mathematics and physics. Engaging with rigorous theoretical frameworks and experimental methodologies. Full details will be updated upon completion.",
+          "award": "Ongoing · Est. completion TBD",
+          "award_icon": "clock"
+        }
+      ]
+    },
+    "activities": {
+      "poster": {
+        "title": "Beyond\nClassroom",
+        "sub": "Volunteering · Community · Impact · 课外活动",
+        "ghost": "03"
+      },
+      "banner_image": "https://picsum.photos/seed/volunteer2024/1400/480",
+      "banner_image_alt": "Activities banner",
+      "circle_image": "https://picsum.photos/seed/charity2024/320/320",
+      "circle_image_alt": "Activity detail",
+      "caption": "Extracurricular · Volunteering · Community · 课外活动",
+      "items": [
+        {
+          "icon": "flask-conical",
+          "title": "Science\nOutreach",
+          "desc": "Taught basic chemistry concepts about volcanoes and guided hands-on eruption experiments, helping primary school pupils understand natural phenomena through science.",
+          "btn": "Volunteer Work"
+        },
+        {
+          "icon": "languages",
+          "title": "College\nFair",
+          "desc": "Served as an on-site interpreter between college admissions officers and prospective students, helping visitors access accurate and relevant admissions information.",
+          "btn": "Translation"
+        },
+        {
+          "icon": "heart",
+          "title": "Charity\nFair",
+          "desc": "Donated clothing to children in rural areas as part of a school-organized charity initiative focused on community support and social responsibility.",
+          "btn": "Community"
+        }
+      ]
+    }
+  },
+  "footer": {
+    "name": "Muo Lue",
+    "sub": "牟略 · Mathematics & Physics · Chongqing, China"
+  }
+}

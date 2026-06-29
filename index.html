@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Muo Lue — Math & Physics</title>
+  <title>Loading…</title>
   <link
     href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,wght@0,400;0,600;0,800;0,900;1,400&display=swap"
     rel="stylesheet" />
@@ -15,270 +15,57 @@
 <body>
 
   <!-- SIDE NAV -->
-  <nav class="side-nav" aria-label="Page sections">
-    <a class="sn-dot on" href="#about" data-label="About"></a>
-    <div class="sn-line"></div>
-    <a class="sn-dot" href="#competitions" data-label="Competitions"></a>
-    <div class="sn-line"></div>
-    <a class="sn-dot" href="#research" data-label="Research"></a>
-    <div class="sn-line"></div>
-    <a class="sn-dot" href="#activities" data-label="Activities"></a>
-  </nav>
+  <nav class="side-nav" aria-label="Page sections" id="side-nav"></nav>
 
   <!-- NAV -->
   <nav>
     <div class="nav-in">
       <div class="nav-logo">ML</div>
-      <ul class="nav-links">
-        <li><a href="#competitions">Competitions</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#activities">Activities</a></li>
-      </ul>
-      <a href="mailto:muelue@example.com" class="nav-cta">Contact</a>
+      <ul class="nav-links" id="nav-links"></ul>
+      <a id="nav-cta" href="#" class="nav-cta">Contact</a>
     </div>
   </nav>
 
   <!-- HERO -->
   <div id="about">
     <section id="hero">
-      <img class="hero-bg-img" src="https://picsum.photos/seed/mathphysics/1600/900" alt="" />
+      <img class="hero-bg-img" id="hero-bg" src="" alt="" />
       <div class="hero-noise"></div>
-      <div class="hero-year">2026</div>
-      <div class="hero-tagline">
-        <p><strong>Mathematics &amp; Physics</strong><br>Chasing rigorous proofs<br>and elegant models.</p>
-      </div>
-      <div class="hero-meta-float">
-        <div class="hm-item"><i data-lucide="school"
-            style="width:12px;height:12px;color:#00C46A"></i><strong>重庆南开中学</strong></div>
-        <div class="hm-item"><i data-lucide="map-pin"
-            style="width:12px;height:12px;color:#00C46A"></i><strong>Chongqing, China</strong></div>
-        <div class="hm-item"><i data-lucide="layers" style="width:12px;height:12px;color:#00C46A"></i><strong>Year
-            12</strong></div>
-      </div>
-      <div class="hero-name-block">
-        <h1 class="hero-name">
-          <span class="stroke">Muo</span><br>
-          <span class="green">Lue</span>
-        </h1>
-        <p
-          style="color:rgba(255,255,255,.35);font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-top:12px">
-          牟略 · Mathematics &amp; Physics</p>
-      </div>
+      <div class="hero-year" id="hero-year"></div>
+      <div class="hero-tagline" id="hero-tagline"></div>
+      <div class="hero-meta-float" id="hero-meta"></div>
+      <div class="hero-name-block" id="hero-name"></div>
       <div class="hero-scroll">Scroll to explore</div>
     </section>
   </div>
 
   <!-- COMPETITIONS -->
-  <div class="poster d">
-    <div class="poster-txt">Competition<br>Record</div>
-    <div class="poster-sub">Math · Physics · Chemistry · Robotics · 竞赛成绩</div>
-    <div class="poster-ghost">01</div>
-  </div>
-
+  <div id="poster-competitions" class="poster d"></div>
   <section id="competitions">
-    <!-- STAIRCASE -->
     <div class="section-wrap" style="padding-top:40px;padding-bottom:100px">
-      <div class="stair-container reveal">
-
-        <!-- long steps: text inside bar -->
-        <div class="stair-row">
-          <div class="stair-bar hl" style="--w:100%">
-            <span class="s-num">01</span>
-            <div class="s-in">
-              <div class="s-name">Global Top 10 &amp; National Top 3 — Team Overall</div>
-              <div class="s-evt">Berkeley Math Tournament</div>
-            </div>
-            <span class="s-date">Nov 2024</span>
-          </div>
-        </div>
-        <div class="stair-row">
-          <div class="stair-bar hl" style="--w:88%">
-            <span class="s-num">02</span>
-            <div class="s-in">
-              <div class="s-name">National Top 3 — Team Guts Round</div>
-              <div class="s-evt">Berkeley Math Tournament</div>
-            </div>
-            <span class="s-date">Nov 2024</span>
-          </div>
-        </div>
-        <div class="stair-row">
-          <div class="stair-bar hl" style="--w:76%">
-            <span class="s-num">03</span>
-            <div class="s-in">
-              <div class="s-name">National Top 3 — Team Power Round</div>
-              <div class="s-evt">Berkeley Math Tournament</div>
-            </div>
-            <span class="s-date">Nov 2024</span>
-          </div>
-        </div>
-        <div class="stair-row">
-          <div class="stair-bar" style="--w:64%">
-            <span class="s-num">04</span>
-            <div class="s-in">
-              <div class="s-name">Gold Award — Senior Physics Challenge Online</div>
-              <div class="s-evt">Senior Physics Challenge</div>
-            </div>
-            <span class="s-date">Sep 2025</span>
-          </div>
-        </div>
-        <div class="stair-row">
-          <div class="stair-bar" style="--w:52%">
-            <span class="s-num">05</span>
-            <div class="s-in">
-              <div class="s-name">Gold Certificate — Senior Mathematics Competition</div>
-              <div class="s-evt">Senior Mathematics Competition</div>
-            </div>
-            <span class="s-date">Sep 2024</span>
-          </div>
-        </div>
-        <div class="stair-row">
-          <div class="stair-bar" style="--w:40%">
-            <span class="s-num">06</span>
-            <div class="s-in">
-              <div class="s-name">2nd Place, Connect Award — FTC</div>
-              <div class="s-evt">FIRST Robotics</div>
-            </div>
-            <span class="s-date">May 2025</span>
-          </div>
-        </div>
-
-        <!-- short steps: text outside -->
-        <div class="stair-row">
-          <div class="stair-bar" style="--w:28%">
-            <span class="s-num">07</span>
-          </div>
-          <div class="s-out">
-            <div class="s-name">Bronze Certificate — UK Chemistry Olympiad Round One</div>
-            <div class="s-evt">Royal Society of Chemistry · <span class="s-date">Jan 2026</span></div>
-          </div>
-        </div>
-        <div class="stair-row">
-          <div class="stair-bar" style="--w:20%">
-            <span class="s-num">08</span>
-          </div>
-          <div class="s-out">
-            <div class="s-name">Top 25% — Hypatia Contest</div>
-            <div class="s-evt">Waterloo Mathematics · <span class="s-date">May 2026</span></div>
-          </div>
-        </div>
-        <div class="stair-row">
-          <div class="stair-bar" style="--w:13%">
-            <span class="s-num">09</span>
-          </div>
-          <div class="s-out">
-            <div class="s-name">Top 25% — AMC 12A</div>
-            <div class="s-evt">American Mathematics Competition · <span class="s-date">Sep 2025</span></div>
-          </div>
-        </div>
-        <div class="stair-row">
-          <div class="stair-bar" style="--w:7%">
-            <span class="s-num">10</span>
-          </div>
-          <div class="s-out">
-            <div class="s-name">Top 25% — Galois Contest</div>
-            <div class="s-evt">Waterloo Mathematics · <span class="s-date">Jun 2025</span></div>
-          </div>
-        </div>
-
-      </div>
+      <div class="stair-container reveal" id="stair-container"></div>
     </div>
   </section>
-
-  <!-- POSTER -->
-  <div class="poster g slant-l">
-    <div class="poster-txt">Research &amp;<br>Modeling</div>
-    <div class="poster-sub">Applied Math · Science · Innovation · 科研经历</div>
-    <div class="poster-ghost">02</div>
-  </div>
 
   <!-- RESEARCH -->
+  <div id="poster-research" class="poster g slant-l"></div>
   <section id="research">
-    <div class="section-wrap reveal">
-      <div class="eyebrow">Research Experience</div>
-      <h2 class="section-heading">Work &amp; Projects<span class="zh">科研 / 建模</span></h2>
-    </div>
-    <div class="section-wrap">
-      <div class="research-item reveal">
-        <div class="r-visual">
-          <img class="r-img" src="https://picsum.photos/seed/himcm/700/380" alt="HiMCM" />
-          <div class="r-img-tag">Completed</div>
-        </div>
-        <div class="r-body">
-          <h3>HiMCM<br>H Award</h3>
-          <p>Participated in the High School Mathematical Contest in Modeling (HiMCM), developing quantitative models to
-            analyze and solve complex real-world problems under competition conditions.</p>
-          <div class="r-award"><i data-lucide="star"></i>H Award · Mathematical Modeling</div>
-        </div>
-      </div>
-      <div class="research-item reveal">
-        <div class="r-visual">
-          <img class="r-img" src="https://picsum.photos/seed/researchlab/700/380" alt="Research" />
-          <div class="r-img-tag ip">In Progress</div>
-        </div>
-        <div class="r-body">
-          <h3>Independent<br>Research</h3>
-          <p>Currently conducting research in mathematics and physics. Engaging with rigorous theoretical frameworks and
-            experimental methodologies. Full details will be updated upon completion.</p>
-          <div class="r-award ip"><i data-lucide="clock"></i>Ongoing · Est. completion TBD</div>
-        </div>
-      </div>
-    </div>
+    <div class="section-wrap reveal" id="research-heading"></div>
+    <div class="section-wrap" id="research-items"></div>
   </section>
 
-  <!-- POSTER -->
-  <div class="poster d slant-r">
-    <div class="poster-txt">Beyond<br>Classroom</div>
-    <div class="poster-sub">Volunteering · Community · Impact · 课外活动</div>
-    <div class="poster-ghost">03</div>
-  </div>
-
   <!-- ACTIVITIES -->
+  <div id="poster-activities" class="poster d slant-r"></div>
   <section id="activities">
-    <div class="act-banner-wrap">
-      <div class="act-banner reveal">
-        <img class="act-banner-img" src="https://picsum.photos/seed/volunteer2024/1400/480" alt="Activities banner"/>
-        <div class="act-banner-circle">
-          <img src="https://picsum.photos/seed/charity2024/320/320" alt="Activity detail"/>
-        </div>
-      </div>
-      <p class="act-caption">Extracurricular · Volunteering · Community · 课外活动</p>
-    </div>
-
-    <div class="act-cols reveal">
-      <div class="act-col">
-        <div class="act-col-icon"><i data-lucide="flask-conical"></i></div>
-        <div class="act-col-title">Science<br>Outreach</div>
-        <div class="act-col-desc">Taught basic chemistry concepts about volcanoes and guided hands-on eruption experiments, helping primary school pupils understand natural phenomena through science.</div>
-        <a class="act-col-btn" href="#">Volunteer Work</a>
-      </div>
-      <div class="act-col">
-        <div class="act-col-icon"><i data-lucide="languages"></i></div>
-        <div class="act-col-title">College<br>Fair</div>
-        <div class="act-col-desc">Served as an on-site interpreter between college admissions officers and prospective students, helping visitors access accurate and relevant admissions information.</div>
-        <a class="act-col-btn" href="#">Translation</a>
-      </div>
-      <div class="act-col">
-        <div class="act-col-icon"><i data-lucide="heart"></i></div>
-        <div class="act-col-title">Charity<br>Fair</div>
-        <div class="act-col-desc">Donated clothing to children in rural areas as part of a school-organized charity initiative focused on community support and social responsibility.</div>
-        <a class="act-col-btn" href="#">Community</a>
-      </div>
-    </div>
+    <div class="act-banner-wrap" id="act-banner-wrap"></div>
+    <div class="act-cols reveal" id="act-cols"></div>
   </section>
 
   <!-- FOOTER -->
   <footer>
     <div class="footer-in">
-      <div>
-        <div class="f-name">Muo Lue</div>
-        <div class="f-sub">牟略 · Mathematics &amp; Physics · Chongqing, China</div>
-      </div>
-      <div class="f-links">
-        <a href="#about">About</a>
-        <a href="#competitions">Competitions</a>
-        <a href="#research">Research</a>
-        <a href="#activities">Activities</a>
-      </div>
+      <div id="footer-info"></div>
+      <div class="f-links" id="footer-links"></div>
     </div>
   </footer>
 
