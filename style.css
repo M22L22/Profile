@@ -35,12 +35,6 @@ body {
   overflow-x: hidden
 }
 
-.zh {
-  font-size: 11px;
-  color: var(--muted);
-  letter-spacing: .05em;
-  font-weight: 400
-}
 
 /* ── NAV ── */
 nav:not(.side-nav) {
@@ -104,18 +98,6 @@ nav:not(.side-nav) {
   background: rgba(0,0,0,.07)
 }
 
-.nav-cta {
-  border: 1.5px solid var(--white);
-  color: var(--white);
-  mix-blend-mode: difference;
-  padding: 8px 20px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: .07em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: background .2s, color .2s
-}
 
 /* ── HERO ── */
 #hero {
@@ -135,7 +117,7 @@ nav:not(.side-nav) {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: .28;
+  opacity: .55;
   filter: grayscale(40%)
 }
 
@@ -170,24 +152,12 @@ nav:not(.side-nav) {
   color: var(--green)
 }
 
-.hero-tagline {
-  position: absolute;
-  right: var(--gutter);
-  bottom: 180px;
-  z-index: 2;
-  text-align: right
-}
-
-.hero-tagline p {
-  font-size: 15px;
-  color: rgba(255, 255, 255, .6);
-  line-height: 1.6;
-  max-width: 280px
-}
-
-.hero-tagline strong {
-  color: var(--white);
-  font-weight: 700
+.hero-major {
+  color: rgba(255,255,255,.8);
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-top: 20px
 }
 
 .hero-meta-float {
@@ -286,14 +256,11 @@ nav:not(.side-nav) {
   margin-bottom: 8px
 }
 
-.section-heading .zh {
-  display: block;
-  font-family: var(--body);
-  font-size: 13px;
-  font-weight: 400;
-  color: var(--muted);
-  letter-spacing: .04em;
-  margin-top: 6px
+.ap-summary {
+  max-width: 900px;
+  font-size: 16px;
+  line-height: 1.8;
+  padding-top: 24px
 }
 
 /* ── STAIRCASE ── */
@@ -398,7 +365,7 @@ nav:not(.side-nav) {
 
 .s-out .s-date {
   font-size: 11px;
-  color: var(--subtle);
+  color: var(--muted);
   margin-top: 1px;
   padding-left: 0
 }
@@ -509,6 +476,11 @@ nav:not(.side-nav) {
   line-height: 1.75
 }
 
+.r-details {margin-top:24px;padding-top:18px;border-top:1px solid var(--border)}
+.r-details .r-details-note {font-size:12px;margin-top:8px;font-style:italic}
+.research-honor {padding-top:24px;border-top:1px solid var(--border)}
+.research-honor p {font-size:clamp(20px,2.2vw,34px);font-weight:800;line-height:1.3}
+
 .r-award {
   display: inline-flex;
   align-items: center;
@@ -555,23 +527,16 @@ nav:not(.side-nav) {
 
 /* ── ACTIVITIES ── */
 #activities{padding:clamp(48px,5vw,96px) 0 clamp(72px, 8vw, 160px);background:var(--bg)}
-.act-banner-wrap{max-width:var(--container-max);margin:0 auto;padding:0 var(--gutter);position:relative}
-.act-banner{position:relative;width:100%;height:auto;aspect-ratio:21/9;overflow:visible}
-.act-banner-img{width:100%;height:100%;object-fit:cover;display:block}
-.act-banner-circle{position:absolute;top:-80px;right:6%;width:min(570px,37vw);height:min(570px,37vw);border-radius:50%;overflow:hidden;border:6px solid var(--bg);box-shadow:0 8px 40px rgba(0,0,0,.25);z-index:2}
-.act-banner-circle img{width:100%;height:100%;object-fit:cover}
-.act-caption{font-size:11px;color:var(--muted);padding:8px 0;letter-spacing:.03em}
+
 .act-cols{display:grid;grid-template-columns:1fr 1fr 1fr;max-width:var(--container-max);margin:48px auto 0;padding:0 var(--gutter)}
 .act-col{padding:0 40px 0 0;border-right:1px solid var(--border)}
 .act-col:first-child{padding-left:0}
 .act-col:last-child{border-right:none;padding-right:0;padding-left:40px}
 .act-col:nth-child(2){padding:0 40px}
-.act-col-icon{width:36px;height:36px;border:1.5px solid var(--blue-mid);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
-.act-col-icon svg{width:16px;height:16px}
+
 .act-col-title{font-size:clamp(18px, 2vw, 32px);font-weight:900;letter-spacing:-.02em;line-height:1.1;margin-bottom:14px}
 .act-col-desc{font-size:14px;color:var(--muted);line-height:1.75;margin-bottom:24px}
-.act-col-btn{display:inline-block;background:var(--blue-mid);color:#fff;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:9px 20px;border-radius:999px;text-decoration:none;transition:background .2s}
-.act-col-btn:hover{background:var(--green)}
+
 
 /* ── FOOTER ── */
 footer {
@@ -641,20 +606,22 @@ footer {
     padding: 16px 24px
   }
 
-  #hero,
   .hero-name-block {
     padding-left: 24px;
     padding-right: 24px
   }
 
-  .hero-tagline,
   .hero-meta-float {
-    display: none
+    position: relative;
+    bottom: auto;
+    right: auto;
+    align-items: flex-start;
+    padding: 0 24px;
+    margin: 120px 0 40px
   }
 
   .section-wrap,
   .poster,
-  .act-list,
   footer {
     padding-left: 24px;
     padding-right: 24px
@@ -665,13 +632,18 @@ footer {
     direction: ltr !important
   }
 
-  .act-item {
-    grid-template-columns: 80px 1fr
-  }
-
-  .act-n {
-    font-size: 56px
-  }
+  .act-cols {grid-template-columns:1fr;margin-top:0;gap:32px}
+  .act-col,.act-col:nth-child(2),.act-col:last-child {padding:0 0 24px;border-right:0;border-bottom:1px solid var(--border)}
+  .act-col:last-child {border-bottom:0}
+  .stair-bar {height:auto;min-height:70px;padding:12px;gap:10px;flex-wrap:wrap}
+  .stair-bar .s-in {flex:1;min-width:100px}
+  .stair-bar .s-date {margin-left:0;padding-left:0}
+  .s-name,.s-evt {white-space:normal;overflow:visible}
+  .s-out {padding-left:12px;min-width:0}
+  .stair-row:has(.s-in) .stair-bar {width:100%}
+  .r-award {align-items:flex-start;line-height:1.6}
+  .r-award svg {flex-shrink:0;margin-top:3px}
+  .f-links {flex-wrap:wrap}
 }
 
 /* ── POSTER diagonal top ── */
@@ -702,7 +674,7 @@ footer {
 /* ── HERO ANIMS ── */
 .hero-bg-img{animation:bgZoom 2.2s cubic-bezier(.25,.46,.45,.94) forwards}
 .hero-name{opacity:0;animation:fadeIn 1s .35s ease forwards}
-.hero-tagline{opacity:0;animation:slideFromRight .75s .7s ease forwards}
+
 .hero-meta-float{opacity:0;animation:slideFromRight .75s 1s ease forwards}
 
 /* ── STAIR ANIMS ── */
@@ -716,9 +688,3 @@ footer {
 .r-body{opacity:0}
 .r-body.slid{animation:slideBodyLeft .55s ease forwards}
 .research-item:nth-child(even) .r-body.slid{animation-name:slideBodyRight}
-
-/* ── ACTIVITIES ANIMS ── */
-.act-banner-circle{opacity:0}
-.act-banner-circle.popped{animation:popBounce .7s cubic-bezier(.34,1.56,.64,1) forwards}
-.act-col{opacity:0}
-.act-col.fi{animation:fadeIn .5s ease forwards}

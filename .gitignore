@@ -1,1 +1,28 @@
-/Sample
+# Local reference screenshots and saved copies of the demo site.
+/Sample/
+
+# Original client questionnaire; keep the two website photos tracked.
+/Content/content.txt
+
+# Local editor and operating-system files.
+/.vscode/
+/.idea/
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+
+# Local credentials and environment overrides (never publish).
+.env
+.env.*
+!.env.example
+
+# Dependencies, generated output, and test artifacts.
+/node_modules/
+/dist/
+/coverage/
+/playwright-report/
+/test-results/
+*.log
+__pycache__/

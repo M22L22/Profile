@@ -1,27 +1,26 @@
 {
   "meta": {
-    "title": "Mou Lue — Math & Physics",
-    "contact_url": "mailto:muelue@example.com"
+    "title": "Mou Lue — Physics"
   },
   "hero": {
     "year": "2026",
-    "tagline": "Mathematics & Physics",
-    "tagline_sub": "Chasing rigorous proofs\nand elegant models.",
+    "tagline": "Intended Major: Physics",
     "name_first": "Mou",
     "name_last": "Lue",
-    "name_zh": "牟略",
-    "school": "山东省实验中学",
-    "location": "Shandong, China",
-    "grade": "Year 12",
-    "bg_image": "https://picsum.photos/seed/mathphysics/1600/900"
+    "school": "Shandong Experimental High School",
+    "location": "Jinan, China",
+    "grade": "Grade 12",
+    "bg_image": "Content/hero_pic.jpg",
+    "bg_image_alt": "A person standing beside an open electrical equipment cabinet."
   },
   "sections": {
     "competitions": {
       "poster": {
         "title": "Competition\nRecord",
-        "sub": "Math · Physics · Chemistry · Robotics · 竞赛成绩",
+        "sub": "Mathematics · Physics · Chemistry · Robotics",
         "ghost": "01"
       },
+      "ap_summary": "AP scores: 5 in Precalculus, Calculus BC, Physics 1, Physics 2, Computer Science A, and Chemistry; Microeconomics: 4.",
       "items": [
         {
           "num": "01",
@@ -66,7 +65,7 @@
         {
           "num": "06",
           "name": "2nd Place, Connect Award — FTC",
-          "event": "FIRST Robotics",
+          "event": "FIRST Tech Challenge",
           "date": "May 2025",
           "width": "40%",
           "highlight": false
@@ -82,7 +81,7 @@
         {
           "num": "08",
           "name": "Top 25% — Hypatia Contest",
-          "event": "Waterloo Mathematics",
+          "event": "Waterloo Mathematics Contests",
           "date": "May 2026",
           "width": "20%",
           "highlight": false
@@ -98,7 +97,7 @@
         {
           "num": "10",
           "name": "Top 25% — Galois Contest",
-          "event": "Waterloo Mathematics",
+          "event": "Waterloo Mathematics Contests",
           "date": "Jun 2025",
           "width": "7%",
           "highlight": false
@@ -108,70 +107,54 @@
     "research": {
       "poster": {
         "title": "Research &\nModeling",
-        "sub": "Applied Math · Science · Innovation · 科研经历",
+        "sub": "Energy Storage · Safety · Mathematical Modeling",
         "ghost": "02"
       },
       "eyebrow": "Research Experience",
       "heading": "Work & Projects",
-      "heading_zh": "科研 / 建模",
+      "honor": "High School Mathematical Contest in Modeling (HiMCM) — H Award",
       "items": [
         {
-          "image": "https://picsum.photos/seed/himcm/700/380",
-          "image_alt": "HiMCM",
-          "status": "Completed",
+          "image": "Content/research_pic.jpg",
+          "image_alt": "A person working at a desktop computer beside a blue-lit PC tower.",
+          "status": "Energy Storage Safety",
           "status_class": "",
-          "title": "HiMCM\nH Award",
-          "desc": "Participated in the High School Mathematical Contest in Modeling (HiMCM), developing quantitative models to analyze and solve complex real-world problems under competition conditions.",
-          "award": "H Award · Mathematical Modeling",
-          "award_icon": "star"
-        },
-        {
-          "image": "https://picsum.photos/seed/researchlab/700/380",
-          "image_alt": "Research",
-          "status": "In Progress",
-          "status_class": "ip",
-          "title": "Independent\nResearch",
-          "desc": "Currently conducting research in mathematics and physics. Engaging with rigorous theoretical frameworks and experimental methodologies. Full details will be updated upon completion.",
-          "award": "Ongoing · Est. completion TBD",
-          "award_icon": "clock"
+          "title": "Lithium Iron Phosphate\nEnergy Storage Safety",
+          "desc": "As China advances its carbon-peaking and carbon-neutrality goals, rapid photovoltaic deployment creates new challenges for grid stability because solar output fluctuates. Lithium iron phosphate (LFP) batteries are widely used to support renewable energy, but safe operation depends on the entire storage system—not just the cells. This project draws on the national standard GB 51048-2025 to examine safety hazards across seven core modules and corresponding standardized prevention measures. It considers how failures in cells, battery packs, control systems, thermal management, fire protection, and site infrastructure can trigger cascading thermal runaway, providing a theoretical reference for engineering design and routine operation and maintenance.",
+          "details": "XX University · XX Laboratory · Research field: XXX · Supervisor: XXX · June 2023 – January 2024",
+          "details_note": "Placeholder affiliation, research field, supervisor, and dates; details awaiting confirmation.",
+          "award": "Keywords: LFP · Thermal Runaway · Safety · Fire Protection",
+          "award_icon": "shield-check"
         }
       ]
     },
     "activities": {
       "poster": {
         "title": "Beyond\nClassroom",
-        "sub": "Volunteering · Community · Impact · 课外活动",
+        "sub": "Volunteering · Community · Outreach",
         "ghost": "03"
       },
-      "banner_image": "https://picsum.photos/seed/volunteer2024/1400/480",
-      "banner_image_alt": "Activities banner",
-      "circle_image": "https://picsum.photos/seed/charity2024/320/320",
-      "circle_image_alt": "Activity detail",
-      "caption": "Extracurricular · Volunteering · Community · 课外活动",
       "items": [
         {
-          "icon": "flask-conical",
-          "title": "Science\nOutreach",
-          "desc": "Taught basic chemistry concepts about volcanoes and guided hands-on eruption experiments, helping primary school pupils understand natural phenomena through science.",
-          "btn": "Volunteer Work"
+          "title": "Primary School\nOutreach Program",
+          "role": "Volunteer",
+          "desc": "Taught primary school pupils basic chemistry concepts about volcanoes and guided hands-on eruption experiments to help them understand how volcanoes form and erupt."
         },
         {
-          "icon": "languages",
-          "title": "College\nFair",
-          "desc": "Served as an on-site interpreter between college admissions officers and prospective students, helping visitors access accurate and relevant admissions information.",
-          "btn": "Translation"
+          "title": "SEHS\nCollege Fair",
+          "role": "Volunteer Translator",
+          "desc": "Served as an on-site interpreter between visitors and college admissions officers at the SEHS College Fair, helping visitors obtain useful admissions information."
         },
         {
-          "icon": "heart",
           "title": "Charity\nFair",
-          "desc": "Donated clothing to children in rural areas as part of a school-organized charity initiative focused on community support and social responsibility.",
-          "btn": "Community"
+          "role": "Participant",
+          "desc": "Donated clothing to children living in rural areas through a charity fair."
         }
       ]
     }
   },
   "footer": {
     "name": "Mou Lue",
-    "sub": "牟略 · Mathematics & Physics · Chongqing, China"
+    "sub": "Intended Major: Physics · Jinan, China"
   }
 }

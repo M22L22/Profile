@@ -9,7 +9,6 @@ function render(d) {
   document.title = meta.title;
 
   // NAV
-  document.getElementById('nav-cta').href = meta.contact_url;
   document.getElementById('nav-links').innerHTML =
     ['competitions', 'research', 'activities']
       .map(s => `<li><a href="#${s}">${cap(s)}</a></li>`).join('');
@@ -20,27 +19,28 @@ function render(d) {
   document.getElementById('side-nav').innerHTML = sectionIds
     .map((id, i) =>
       (i === 0 ? '' : '<div class="sn-line"></div>') +
-      `<a class="sn-dot${i === 0 ? ' on' : ''}" href="#${id}" data-label="${labels[i]}"></a>`)
+      `<a class="sn-dot${i === 0 ? ' on' : ''}" href="#${id}" aria-label="${labels[i]}" data-label="${labels[i]}"></a>`)
     .join('');
 
   // HERO
   document.getElementById('hero-bg').src = hero.bg_image;
+  document.getElementById('hero-bg').alt = hero.bg_image_alt;
   document.getElementById('hero-year').textContent = hero.year;
-  document.getElementById('hero-tagline').innerHTML =
-    `<p><strong>${hero.tagline}</strong><br>${hero.tagline_sub.replace('\n', '<br>')}</p>`;
+
   document.getElementById('hero-meta').innerHTML = [
     ['school', hero.school],
     ['map-pin', hero.location],
     ['layers', hero.grade]
   ].map(([icon, text]) =>
-    `<div class="hm-item"><i data-lucide="${icon}" style="width:12px;height:12px;color:#00C46A"></i><strong>${text}</strong></div>`
+    `<div class="hm-item"><i data-lucide="${icon}"></i><strong>${text}</strong></div>`
   ).join('');
   document.getElementById('hero-name').innerHTML =
     `<h1 class="hero-name"><span class="stroke">${hero.name_first}</span><br><span class="green">${hero.name_last}</span></h1>
-     <p style="color:rgba(255,255,255,.35);font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-top:12px">${hero.name_zh} · ${hero.tagline}</p>`;
+     <p class="hero-major">${hero.tagline}</p>`;
 
   // COMPETITIONS POSTER
   renderPoster('poster-competitions', sections.competitions.poster);
+  document.getElementById('ap-summary').textContent = sections.competitions.ap_summary;
 
   // STAIRCASE
   document.getElementById('stair-container').innerHTML =
@@ -72,41 +72,34 @@ function render(d) {
   // RESEARCH ITEMS
   document.getElementById('research-heading').innerHTML =
     `<div class="eyebrow">${sections.research.eyebrow}</div>
-     <h2 class="section-heading">${sections.research.heading}<span class="zh">${sections.research.heading_zh}</span></h2>`;
+     <h2 class="section-heading">${sections.research.heading}</h2>`;
   document.getElementById('research-items').innerHTML =
     sections.research.items.map(item =>
       `<div class="research-item reveal">
         <div class="r-visual">
-          <img class="r-img" src="${item.image}" alt="${item.image_alt}" />
+          <img class="r-img" src="${item.image}" alt="${item.image_alt}" loading="lazy" />
           <div class="r-img-tag${item.status_class ? ' ' + item.status_class : ''}">${item.status}</div>
         </div>
         <div class="r-body">
           <h3>${item.title.replace('\n', '<br>')}</h3>
           <p>${item.desc}</p>
+          <div class="r-details"><p>${item.details}</p><p class="r-details-note">${item.details_note}</p></div>
           <div class="r-award${item.status_class ? ' ' + item.status_class : ''}"><i data-lucide="${item.award_icon}"></i>${item.award}</div>
         </div>
       </div>`
-    ).join('');
+    ).join('') + `<div class="research-honor reveal"><div class="eyebrow">Modeling Award</div><p>${sections.research.honor}</p></div>`;
 
   // ACTIVITIES POSTER
   renderPoster('poster-activities', sections.activities.poster);
 
-  // ACTIVITIES BANNER
+  // TEXT-ONLY ACTIVITIES
   const act = sections.activities;
-  document.getElementById('act-banner-wrap').innerHTML =
-    `<div class="act-banner reveal">
-      <img class="act-banner-img" src="${act.banner_image}" alt="${act.banner_image_alt}" />
-      <div class="act-banner-circle"><img src="${act.circle_image}" alt="${act.circle_image_alt}" /></div>
-    </div>
-    <p class="act-caption">${act.caption}</p>`;
-
   document.getElementById('act-cols').innerHTML =
     act.items.map(item =>
-      `<div class="act-col">
-        <div class="act-col-icon"><i data-lucide="${item.icon}"></i></div>
+      `<div class="act-col reveal">
+        <div class="eyebrow">${item.role}</div>
         <div class="act-col-title">${item.title.replace('\n', '<br>')}</div>
         <div class="act-col-desc">${item.desc}</div>
-        <a class="act-col-btn" href="#">${item.btn}</a>
       </div>`
     ).join('');
 
@@ -154,25 +147,6 @@ function render(d) {
     }, { threshold: 0.1 });
     io.observe(item);
   });
-
-  // ── ACTIVITIES: circle pop then cols fade ──
-  const circleEl = document.querySelector('.act-banner-circle');
-  if (circleEl) {
-    const circleIO = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        circleEl.classList.add('popped');
-        setTimeout(() => {
-          document.querySelectorAll('.act-col').forEach((col, i) => {
-            col.style.animationDelay = (i * 120) + 'ms';
-            col.classList.add('fi');
-          });
-        }, 600);
-        circleIO.disconnect();
-      });
-    }, { threshold: 0.2 });
-    circleIO.observe(circleEl);
-  }
 
   // generic reveal for remaining .reveal elements
   const revealIO = new IntersectionObserver(
